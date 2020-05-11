@@ -10,22 +10,29 @@ Poetry is used to create a self-isolated virtual environment with the specific p
 
 Change directory to location of poetry-solar folder within the cloned Github repo:
 ```bash
-cd (path_to_solar-model_repo/poetry-solar)
+$ cd path_to_solar-model_repo/poetry-solar
 ```
 
 Install Poetry:
 ```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
 Install the packages specified in pyproject.toml:
 ```bash
-poetry install
+$ poetry install
 ```
 Create kernel for virtual environment:
 ```bash
 poetry run ipython kernel install --user --name=solar-kernel
 ```
+
+When you are finished running the model code, Poetry can be uninstalled by running:
+```bash
+$ python get-poetry.py --uninstall
+```
+
+**If you would rather not use Poetry, the necessary package versions listed in the "pyproject.toml" file can be installed using the package manager of your choice.**
 
 # Run and evaluate model
 
@@ -34,7 +41,7 @@ Open jupyter notebook:
 poetry run jupyter notebook
 ```
 
-The notebook (entitled "solar_model_notebook.ipynb", located within the poetry-solar folder) contains instructions for how to run and evaluate model. The model can be trained from scratch using the training dataset, or the pre-trained model weights can be loaded in instead. Training from scratch takes a significant amount of time to run (even on a GPU), so it is recommended to instead install the pre-trained model.
+The notebook (entitled "solar_model_notebook.ipynb", located within the poetry-solar folder) contains instructions for how to run and evaluate our model. The model can be trained from scratch using the training set, or the pre-trained model weights can be loaded in instead. Training from scratch takes a significant amount of time, so it is recommended to instead install the pre-trained model.
 
 # Other files contained in repository
 
