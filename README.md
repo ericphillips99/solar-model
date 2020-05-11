@@ -10,7 +10,7 @@ Poetry is used to create a self-isolated virtual environment with the specific p
 
 Change directory to location of poetry-solar folder within the cloned Github repo:
 ```bash
-cd (path_to_solar-model)
+cd (path_to_solar-model_repo/poetry-solar)
 ```
 
 Install Poetry:
